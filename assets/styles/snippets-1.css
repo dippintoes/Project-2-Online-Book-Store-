@@ -1,0 +1,98 @@
+body{
+	margin: 0px;
+}
+.button button{
+	background-color: burlywood;
+	border-radius: 50px;
+	border-color: transparent;
+}
+.button button a{
+	color: #fff;
+	text-decoration: none;
+}
+.gradient{
+	min-height: 500px;
+	background-image: linear-gradient(orange,white,green);\*radial*\
+}
+.transition{
+	background: none;
+	transition: background 3s;
+}
+.transition:hover{
+	background: lightgreen;
+}
+@media(min-width: 1440px) and (max-width: 2560px){
+	.button .xl{
+		padding: 15px 45px;
+		font-size: 36px; 
+	}
+} 
+@media(min-width: 1024px) and (max-width: 1439px){
+	.button .md{
+		padding: 13px 35px;
+		font-size: 24px; 
+	}
+} 
+@media(min-width: 768px) and (max-width: 1023px){
+	.button .sm{
+		padding: 11px 25px;
+		font-size: 18px; 
+	}
+} 
+@media(min-width: 425px) and (max-width: 767px){
+	.button .xs{
+		padding: 9px 15px;
+		font-size: 16px; 
+	}
+} 
+@media(min-width: 320px) and (max-width: 424px){
+	.button .lg{
+		padding: 7px 5px;
+		font-size: 12px; 
+	}
+}
+.background div{
+	background-image: url('https://img.freepik.com/free-vector/positive-mind_24908-52692.jpg?size=338&ext=jpg&ga=GA1.2.1464689620.1594994494');
+	min-height: 500px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.borderwidth{
+	border-width: 2.5px;
+	border-style: double;
+	border-color: aquamarine;
+}
+/*
+border-right
+border-left
+border-right-width
+border-left-width
+border-right-style
+border-left-style
+also for top and bottom
+*/
+.floatright{
+	float: right;
+}
+.floatleft{
+	float: left;
+}
+.height{
+	height: 500px;
+	background-color: peru;
+}
+.maxheight{
+	max-height: 120px;
+	background-color: green;
+	overflow: scroll;
+}
+.minheight{
+	min-height: 150px;
+	background-color: yellow;
+}
+/*
+margin:20px; ltrb
+margin:20px 10px;  tb lr
+length
+padding
+*/

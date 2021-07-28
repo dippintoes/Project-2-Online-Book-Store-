@@ -1,0 +1,235 @@
+body{
+	margin: 0px auto;
+	width: 100%;
+}
+
+nav ul li{
+	list-style-type: none;
+	float: left;
+	padding-right: 2.3em;
+	color: #14ffec; 
+	font-family: 'Exo 2', sans-serif;
+}
+
+nav ul{
+	float: right;
+}
+nav{
+	width: 100%;
+	height: 50px;
+	background-color: #212121;
+	position: fixed;
+}
+nav ul li a{
+	text-decoration: none;
+	color: #14ffec
+}
+section{
+	background-color: #323232;
+}
+.home{
+	background-color: #323232;
+	text-align: center;
+	color: #a8e6cf; 
+	font-size: 160%;
+	display: table;
+	height: 100vh;
+	width: 100%;
+}
+.home .inner{
+	display: table-cell;
+	vertical-align: middle;
+}
+.home .inner .img{
+	border-radius: 80%;
+	padding:50px;
+	padding-top: 90px;	
+}
+.home .inner h1{
+	font-family: 'Dosis', sans-serif;
+	font-weight: 100;
+	font-size: 50px;
+}
+.about{
+	background-image: url(https://images.pexels.com/photos/234527/pexels-photo-234527.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+	color: #14ffec; 
+	font-size: 160%;
+	display: table;
+	height: 100vh;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-left: 50px;
+	padding-right: 100px;
+	font-family: 'EB Garamond', serif;
+	line-height: 50px;
+}
+.about .inner{
+	display: table-cell;
+	vertical-align: middle;
+	float: center;
+	padding left: 59px; 
+	padding-right: 100px;
+}
+.about .inner h1, .Education h1, .contact h1, .skills .inner h1, .hobby .inner h1, .contact .inner h1{
+	font-size: 80px;
+	font-family: 'Varta', sans-serif;
+}
+.about .inner h2{
+	font-size: 30px;
+}
+.Education{
+	background-color: black; 
+	color: #14ffec; 
+	display: table;
+	height: 100vh;
+	width: 100%;
+}
+.Education .inner{
+	padding: 50px;
+	padding-bottom: 80px;
+}
+.Education .inner div, .skills .inner div, .hobby .inner div{
+	width: 30%;
+	display: table-cell;
+	margin-right : 5px;
+	margin-left: 5px;
+	float: left;
+	text-align: center;
+}
+.Education .inner div img,{
+	width: 50%;
+	height: auto;
+}
+.Education .inner p, .contact .inner p{
+	font-size: 26px;
+}
+.skills{
+	background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRMxezfogXDK06oxswFxBOwSCzYeMRF57xHMw&usqp=CAU);
+	color: #14ffec; 
+	display: table;
+	height: 100vh;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.skills .inner{
+	padding: 50px;
+	font-family: 'EB Garamond', serif;
+}
+.skills .inner ul li{
+	list-style-type: none;
+	padding-top: 25px;
+	font-size: 25px;
+}
+.skills .inner h1, .hobby .inner h1{
+	padding-bottom: 80px;
+}
+.hobby{ 
+	background-color: black;
+	color: #a8e6cf;
+	font-size: 120%;
+	display: table;
+	height: 100vh;
+	width: 100%;
+	padding: 50px;
+	font-family: 'EB Garamond', serif;
+}
+.contact{
+	background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSEhIVFRUVFRUVFRUVFRUVFRUPFRUWFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIALEBHAMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAAAAQIDBAf/xAAmEAEBAQEAAgIBAwUBAQAAAAAAAQIRAyESMUFRcYFhscHw8aET/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APFgAABADEAAKKHAKwL4fAKQ8YPjTEASGqwuAOCQ5lWYCeJ1WtyjeAYrkOeOq5wGNh8aWHMgysLjT4psBFhKpcBFh8OlAIUCgkGQBNqkgeTTDAjIwEgBgRiCAcXIlUA+CKhzgHmLmSisQDogXnIFIfD40kBlCsXnHvq7kGUyWsfo21jsKZ4DDMX8V3PsbBnuM7GtiNAxsKxdTYCKmr1EUBwqZUE0lEBUjAFwwAAAAQyMDkEhw5AORcIwPis5Lqs0FSKzlMXkDka4jPjTAHYuZSqfQKkjHX22xj+B6AoN/Q6nvYBROorKdgy8muInutNTqZ6BOsp4vVLoMtM2u6z0CbE1VT0CJVSBADgACHwCMhAMQcHAUqFDBXSuiHAPq81EaZgLy1lYxrICzz/kpGucfkDy0zDmfX9j+UgKmUXJ3yf34v8AAMfj+DuVeTXP3ZTydA/iy8y7edZeX3P/AEGM3Yr5QZyneeAPJZfZY+k2cX476ArEajWI1AY6ieNNs7ATUqpAXCUQA4RgkyHQVw+FDBUNMpygZdPpAqRWUxUBcaeP7RmtPDAbyL8aWmPr/foBbZ+R30dz/lP0DS0S1nN+xdAXllTjF61zFaxPwCdTrDeGs3IXk190HPnPv7/6W2pfEGFgxK1voqCUWr/lnYCNs7GlRYCLC4qkCeEqkBAAAAAHVJioBwyOAch8BgcipExcBWMts5Z4bZoKjTxT1/xnxt4pwCt5/kfH169r3PX0mfQJxPfD3n/f6rzr7Tq/1BnbRe8+2m6XAc9608c/VV4nvsBounYz13nr+f2AuFpdvpOwRazul1iB6RxVTQTU1WkwCpHUgAAAAAAyAKhwofQV1UQvIKzFZgzVZA407z2z4qA3la+P9nNnTfxUHV4569+0eS1eb/RGwKX0z1f9/Bz9x5voGPk3ZxfzQYK+Rfd+/TO086BdY/Lv8ev5X8itAWooukUE7rPq9IAJ0LUgQoK0CSrpUEmD4BEZAD6QBUohCA0i4jKuguNMVhK1yDQ4XDkBWK6PHpzxWaDr+fov/oj8cZ/L9Aaaos6WeVeefUBE8aLON9aZWAwtK0969igU1wfIulYC0n0Sgy1Eq4i0E9RVVPATNA+CgVIyAjogoERkAAAGAcBWThQ4ByNc1B9BrNHNRl1UBt2K8e0T91QF/JWdJlHzBc0edJg6DSWJ8t/Qa1+EeTfICLE2p+adUD1oTTI+g0+Sam6K7AdL5CptA6igqApUqQGQAAyAEYIAZGAiokwVDKU+grppHQOqxpEqug3lP5MfkfyBr0IlHyBrNcLPk9o+SfkDbparK6Hz9AKLU9LoGLU9AClStFoCUFCoGmn0qCS6ZALR0EBwdAAyMACpgCMgC4aYYKCTgHD6jpygvpyoiugqU+phdBfRano6B0pS6AEoSICi6VHQFLpWigcFKHQTS6dIAQHAEAAAAAqCgAQAAAAFQ6YAoVAAgYA8qgAHCAAQwAKAACAAAgAKgAAAAIgASYAGAAIgAf/Z);
+	color: #14ffec; 
+	display: table;
+	height: 100vh;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 50px;
+
+}
+.contact .inner{
+	padding: 50px;
+	text-align: center;
+	font-family: 'EB Garamond', serif;
+}  
+.contact .inner h3{
+	font-size: 30px;
+}
+.contact .inner a{
+	text-decoration: none;
+	color: #14ffec;
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+	.home .inner img{
+		padding-top: 100px;
+	}
+	#About{
+		background:-grey;important;
+	}
+	.about .inner{
+		width: 100%;
+		padding: 50px;
+	}
+	.about .inner p{
+		font-size: 24px;
+		text-align: justify;
+	}
+	.Education .inner div, .skills .inner div, .hobby .inner div{
+		width: 100%;
+	}
+	.Education .inner div{
+		border-bottom: 2px solid #d3d3d3;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+	.home .inner img{
+		padding-top: 100px;
+	}
+	#About{
+		background:-brown;important;
+	}
+	.about .inner{
+		width: 100%;
+		padding: 50px;
+	}
+	.about .inner p{
+		font-size: 22px;
+		text-align: justify;
+	}
+	.Education .inner div, .skills .inner div, .hobby .inner div{
+		width: 100%;
+	}
+	.Education .inner div{
+		border-bottom: 1px solid #d3d3d3;
+	}
+} 
+@media(min-width: 1024px) and (max-width: 1439px){
+	.about .inner .h1, .skills .inner h1, .Eduation .inner, .hobby .inner h1{
+		padding-top: 60px;
+		padding-bottom: 40px;
+	}
+}
+@media(min-width: 1440px) and (max-width: 2560px){
+	body{
+		width: 50%;
+	}
+	nav{
+		width: 50%;
+	}
+	.about .inner .h1, .skills .inner h1, .Eduation h1, .hobby .inner h1{
+		padding-top: 60px;
+		padding-bottom: 40px;
+	}
+	.Education .inner div, .skills .inner div, .hobby .inner div{
+		width: 100%;
+	}
+	.Education .inner div, .skills .inner div:not(:last-child) , .hobby .inner div:not(:last-child){
+		border-bottom: 1px solid #d3d3d3;
+	}
+	.Education .inner div img, .skills .inner div img, .hobby .inner div img{
+		padding-bottom: 40px;
+		padding-top: 50px;
+	}
+}
+

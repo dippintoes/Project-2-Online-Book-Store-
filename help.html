@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="generator" content="Bluefish 2.2.4" />
+<link href="aboutus.css" type="text/css" rel="stylesheet" />
+  <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+<style>
+body {
+  margin:0px;
+background: grey url(http://www.rahulsharma.us/sunny/navbars/images/bodybg.png)}
+
+.rc_nav {
+  overflow: hidden;
+  background-color: black;
+  text-align: center;
+  z-index: 6;
+  position: -webkit-sticky;
+  font-family: cursive;
+}
+.rc_nav a {
+ display: inline-block;
+ margin-right: -4px; 
+ color: orange;
+ padding: 10px 50px;
+ text-decoration: none;
+ font-size: 18px;
+ -webkit-transition: background 0.3s linear;
+ -moz-transition: background 0.3s linear;
+ -ms-transition: background 0.3s linear;
+ -o-transition: background 0.3s linear;
+ transition: background 0.3s linear;
+ z-index: 9;
+}
+.rc_nav a:hover {
+  background-color: #52575d;
+  color: white;
+}
+.rc_nav a:span{
+    position: absolute;
+    transition: all 0.4s;   
+}
+span{
+    transform: translate(0);
+}
+.rc_nav .icon {
+  display: inline-flex;
+}
+.rc_content {
+  text-align: center; 
+  padding-left:14px; 
+  margin-top: 100px;  
+  color: black;
+}
+/*my circle */ 
+.ca-menu{
+    padding-top: 50px;
+    padding-right: 80px;
+    margin-bottom: -200px;
+    margin:20px auto;
+    width: 1020px;
+	font-family: 'Dosis', sans-serif;
+   z-index: 102;
+   position:relative;
+}
+.ca-menu li{
+    width: 230px;
+    height: 230px;
+    border: 5px solid #fff;
+    overflow: hidden;
+    position: relative;
+    float:left;
+    background: #000;
+    margin-left: 403px;
+    margin-right: 4px;
+    margin-top: 95px;
+    -webkit-box-shadow: -1px -6px 9px 4px #000000;
+-moz-box-shadow:-1px -6px 9px 4px #000000;
+box-shadow: -1px -6px 9px 4px #000000;  
+    -webkit-border-radius: 125px;
+    -moz-border-radius: 125px;
+    border-radius: 125px;
+    -webkit-transition: all 400ms linear;
+    -moz-transition: all 400ms linear;
+    -o-transition: all 400ms linear;
+    -ms-transition: all 400ms linear;
+    transition: all 400ms linear;
+}
+.ca-menu li:last-child{
+    margin-right: 0px;
+    margin: 0 auto 0 376px;
+}
+.ca-menu li a{
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: orange;
+    position: relative;
+   -moz-box-shadow:0px 0px 3px #000000;
+   -webkit-box-shadow:0px 0px 3px #000000;
+   box-shadow:0px 0px 3px #000000;
+
+}
+.ca-main img {
+    height: 80px;
+    left: 50%;
+    margin-left: -78px;
+    opacity: 1;
+    position: absolute;
+    text-align: center;
+    top: 60px;
+    transform: rotate(0deg);
+    width: 170px;
+}
+.ca-sub{
+    text-align:center;
+    color: orange;
+    font-size: 34px;
+    position: absolute;
+    height: 80px;
+    width: 170px;
+    left: 50%;
+    margin-left: -85px;
+    top: 60px;
+    opacity: 0;
+     margin-top: 12px;
+    
+    -webkit-transition: all 400ms linear;
+    -moz-transition: all 400ms linear;
+    -o-transition: all 400ms linear;
+    -ms-transition: all 400ms linear;
+    transition: all 400ms linear;
+    
+    
+ - transform: rotate(0deg); /* IE 9 */
+ transform: rotate(0deg); /* Chrome, Safari, Opera */
+ transform: rotate(0deg); /* Standard syntax */
+}
+
+.ca-menu li:hover{
+    background: #000;
+    border-color: #fff;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 45px 50px -50px #fff;
+}
+
+.ca-menu li:hover .ca-main{
+    display: none;
+}
+.ca-menu li:hover .ca-sub{
+    opacity: 1;
+}
+
+/* my circle End*/
+
+#infobox{
+  background-color: #1b262c;
+  color: orange;
+  margin-top:20px;
+  width: 800px;
+  margin-left:  234px;
+  margin-right: auto;
+  position:relative; 
+margin-top: 250px;
+  /* border raduis */
+  border-radius: 20px 20px 20px 20px;
+-moz-border-radius: 20px 20px 20px 20px;
+-webkit-border-radius: 20px 20px 20px 20px;
+border: 0px solid orange;
+  
+  /* border shadow */
+  -webkit-box-shadow: -1px 0px 10px 0 #fa7d09;
+-moz-box-shadow:-1px 0px 10px 0 #000;
+box-shadow: -1px 0px 10px 0 #fa7d09;  
+  }
+#infobox .line1{
+  position:absolute;
+  margin-top: 162px;
+color: orange;
+font-size: 20px;
+margin-left: 290px; 
+font-family: 'Merienda', cursive;
+ text-decoration:none;
+}
+.mypic{
+	 border-radius: 100px;
+    height: 190px;
+    width: 184px;
+    margin-left: 324px;
+  margin-top: 216px;
+transition: all 0.5s ease;
+background-color:#fff;
+padding: 6px;
+ }
+
+.mypic:hover {
+    border-radius:40px;
+ box-shadow:0px 0px 20px #ccc 
+}
+.myinfo{
+  color:#fff;
+  font-family: 'Merienda', cursive;
+  padding-top: 25px;
+  padding-left: 340px;
+}
+
+.footer{
+  margin-top: 100px;
+  width: 100%;
+  display: inline-block;
+  background: black;
+  height: 50vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed{
+  background: #666;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+
+
+.footer-distributed h3{
+  color:  orange;
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  lightseagreen;
+}
+.footer-distributed .footer-links{
+  color:  black;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+.footer-distributed .footer-links a:hover{
+  color: blue;
+}
+.footer-distributed .footer-company-name{
+  color:  #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  lightseagreen;
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: yellow;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color: orange;
+  font-size: 17px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 2px;
+  padding-right: 25px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+  
+  
+  background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #CCCCCC),
+	color-stop(1, #FFFFFF)
+);
+background-image: -o-linear-gradient(bottom, #CCCCCC 0%, #FFFFFF 100%);
+background-image: -moz-linear-gradient(bottom, #CCCCCC 0%, #FFFFFF 100%);
+background-image: -webkit-linear-gradient(bottom, #CCCCCC 0%, #FFFFFF 100%);
+background-image: -ms-linear-gradient(bottom, #CCCCCC 0%, #FFFFFF 100%);
+background-image: linear-gradient(to bottom, #CCCCCC 0%, #FFFFFF 100%);
+
+}
+
+hr{
+  margin-top:50px;
+  background-color:#ccc; 
+ 
+}
+
+.bottomtitle{
+  color:orange;
+  font-family: 'Courgette', cursive;
+  font-size:17px;
+  margin-left: 10px;
+  margin-top: 7px;
+  }
+</style>
+</head>
+<body>
+<div class="home" id="Home">
+		<div class="rc_nav" id="centered_nav">
+          <a href="pradigm.html">Home</a>
+		  <a href="pradigm.html">Just-arrived</a>
+		  <a href="Best-sellers.html">Best-sellers</a>
+		  <a href="Contact.html">Contact us at</a>
+          <a href="#footer" title="Menu" style="font-size:18px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+    <ul class="ca-menu">
+    <li>
+    <a href="#">
+    <div class="ca-content"></div> 
+       <h2 class="ca-main"><img src="assets\images\LOGO.jpeg"></h2>
+       <h3 class="ca-sub">Pradigm</h3>
+      </a></li>
+      </ul>
+  <div id="infobox">
+  <p class="line1"> Founder of Pradigm & co. </p>
+<table>
+<tr><img class="mypic" alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQxygrD2GajH3alfA_6D9tf9kIohRozEqfUtw&usqp=CAU"> </tr>
+<tr><p class="myinfo">  Rutuja Nandkumar Gosavi<br>19 yrs old, <br> Future IT Engineer, <br> &Programmer, <br>#nomad in search of perfect burger..<br /></p>
+</tr>
+</table>
+<p class="bottomtitle"> Powered by <b> Pradigm, booklovers & co. </b> </p>
+</div>
+<section class="footer" id="footer">
+        <footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>PRADIGM</span></h3>
+
+				<p class="footer-links">
+					<a href="pradigm.html" class="link-1">Home</a>
+					
+					<a href="pradigm.html">Just-arrived</a>
+				
+					<a href="Best-sellers.html">Best seller</a>
+				
+					<a href="contact.html">Contact us at</a>
+					
+					<a href="#">About us</a>
+				</p>
+
+				<p class="footer-company-name">Pradigm © 2015</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>149 S. Cannought Place</span> Aurangabad, Maharashtra</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1.555.555.5555</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:bibliophiles@gmail.com">support@pradigm.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+					By a reader for the readers
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><img src="https://i.pinimg.com/originals/2e/20/0c/2e200c844ea18ccdc9c582329dfcb92e.jpg" width="48" height="48" alt="" /></a>
+<a href="#"><img src="https://www.ceviz.io/static/google-logo-3f3dbee38e0e229df60c33e98ae0186d.png" width="48" height="48" alt="" /></a>
+<a href="#"><img src="https://ih1.redbubble.net/image.565125817.5926/poster,840x830,f8f8f8-pad,1000x1000,f8f8f8.jpg" width="48" height="48" alt="" /></a>
+				</div>
+
+			</div>
+
+		</footer>
+</section>
+
+</body>
+</html>

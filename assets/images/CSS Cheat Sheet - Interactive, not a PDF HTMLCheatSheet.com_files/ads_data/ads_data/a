@@ -1,0 +1,32 @@
+
+var ftGUID_4214907="45969E56F6A435";
+var ftConfID_4214907="0";
+var ftParams_4214907="ftx=&fty=&ftadz=&ftscw=&ft_custom=&ftOBA=1&ft_agentEnv=0&ft_referrer=https%3A%2F%2Fgoogleads.g.doubleclick.net%2Fpagead%2Fads%3Fclient%3Dca-pub-9728962508602593%26output%3Dhtml%26h%3D280%26slotname%3D1534550908%26adk%3D3445783561%26adf%3D375927780%26w%3D336%26lmt%3D1581939280%26psa%3D0%26guci%3D2.2.0.0.2.2.0.0%26format%3D336x280%26url%3Dhttps%253A%252F%252Fhtmlcheatsheet.com%252Fcss%252F%26flash%3D0%26wgl%3D1%26adsid%3DChAI8KWU-QUQ3Nuv_5mTwfAxEkgAddE0FsGe5hnOn-elnY38Cy0BPYI979XWxlHid7zHVnajXDJzM2ZlGxwnibLPSMOlK5hg5Jzr-YnFdRUJzdYHzh1Y_3w9fJE%26dt%3D1596274726612%26bpp%3D13%26bdt%3D3947%26idt%3D782%26shv%3Dr20200729%26cbv%3Dr20190131%26ptt%3D9%26saldr%3Daa%26abxe%3D1%26cookie%3DID%253D00bf6387da9c79e9%253AT%253D1596274899%253AS%253DALNI_Mb4z_kVU4jJ6G1TG2LIKMPtM03I0g%26correlator%3D2778535258372%26frm%3D20%26pv%3D2%26ga_vid%3D457723346.1596274727%26ga_sid%3D1596274727%26ga_hid%3D783349077%26ga_fc%3D0%26icsg%3D153612189354%26dssz%3D26%26mdo%3D0%26mso%3D0%26u_tz%3D330%26u_his%3D5%26u_java%3D0%26u_h%3D768%26u_w%3D1366%26u_ah%3D728%26u_aw%3D1366%26u_cd%3D24%26&cachebuster=16555.02094268191";
+var ftKeyword_4214907="";
+var ftCustom_4214907="";
+var ftSection_4214907="";
+var ftSegment_4214907="";
+var ftSegmentList_4214907=[];
+var ftRuleMatch_4214907="0";
+var ftTimestamp_4214907="1596274965";
+var ftGeoC2_4214907="in";
+var ftGeoState_4214907="mh";
+var ftGeoCity_4214907="pune";
+var ftISP_4214907="idea cellular limited";
+var ftSpeed_4214907="mobile";
+var ftDMA_4214907="356005";
+var ftLong_4214907="74.46";
+var ftLat_4214907="18.11";
+var ftPostal_4214907="413110";
+var ftTimeZone_4214907="530";
+var ftMobileCarrier_4214907="idea";
+var ftImp4214907 = {};
+ftImp4214907.privacy = "x";
+ftImp4214907.guidAge = "-1";
+ftImp4214907.impID = "AF8BC4C2-105C-9649-416B-2CF1353FC93A";
+ftImp4214907.duid = "FT:45969E56F6A435";
+
+ftImp4214907.ft_tpplid = "";
+ftImp4214907.ft_c = {};
+
+document.write('<scr'+'ipt src="https://cdn.flashtalking.com/xre/421/4214907/2776215/js/j-4214907-2776215.js" id="ftscript_m4214907" name="ftscript_m4214907"></scr'+'ipt>');

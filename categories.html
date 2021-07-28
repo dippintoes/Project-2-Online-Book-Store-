@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Categories</title>
+</head>
+<style>@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+*
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+}
+a
+{
+    text-decoration: none;
+}
+.rc_nav {
+  overflow: hidden;
+  background-color: black;
+  text-align: center;
+  z-index: 6;
+  position: -webkit-sticky;
+  font-family: cursive;
+}
+.rc_nav a {
+ display: inline-block;
+ margin-right: -4px; 
+ color: orange;
+ padding: 10px 50px;
+ text-decoration: none;
+ font-size: 18px;
+ -webkit-transition: background 0.3s linear;
+ -moz-transition: background 0.3s linear;
+ -ms-transition: background 0.3s linear;
+ -o-transition: background 0.3s linear;
+ transition: background 0.3s linear;
+ z-index: 9;
+}
+.rc_nav a:hover {
+  background-color: #52575d;
+  color: white;
+}
+.rc_nav a:span{
+    position: absolute;
+    transition: all 0.4s;   
+}
+span{
+    transform: translate(0);
+}
+.rc_nav .icon {
+  display: inline-flex;
+}
+.rc_content {
+  text-align: center; 
+  padding-left:14px; 
+  margin-top: 100px;  
+  color: black;
+}
+.product-card,.product-card1,.product-card2,.product-card3,.product-card4,.product-card5{
+    width: 449px;
+    float: left;
+    position: relative;
+    box-shadow: 0 2px 7px #dfdfdf;
+    margin: 50px auto;
+    background: #fafafa;
+}
+.h2, .h1{
+	padding-top: 50px;
+font-size: 50px;
+font-family: 'Roboto Mono', monospace;
+text-decoration: none;
+color: black;
+cursor: pointer;
+}
+.h2 a,.h1 a{
+	text-decoration: none;
+	color: black;
+}
+.h2 a:hover,.h1 a:hover{
+	background-color: orange;
+	color: black;
+}
+.badge,.badge1,.badge2,.badge3,.badge4,.badge5 {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background: red;
+    color: #fff;
+    padding: 3px 10px;
+}
+
+.product-tumb,.product-tumb1,.product-tumb2,.product-tumb3,.product-tumb4,.product-tumb5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    padding: 50px;
+    background: #f0f0f0;
+}
+
+.product-tumb img,.product-tumb1 img,.product-tumb2 img,.product-tumb3 img,.product-tumb4 img,.product-tumb5 img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product-details, .product-details1,.product-details2,.product-details3,.product-details4,.product-details5{
+    padding: 30px;
+}
+
+.product-catagory, .product-catagory1,.product-catagory2,.product-catagory3,.product-catagory4,.product-catagory5 {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: red;
+    margin-bottom: 18px;
+}
+
+.product-details h4 a, .product-details1 h4 a, .product-details2 h4 a, .product-details3 h4 a,.product-details4 h4 a,.product-details5 h4 a{
+    font-weight: 500;
+    display: block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: #363636;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.product-details h4 a:hover,.product-details1 h4 a:hover,.product-details2 h4 a:hover,.product-details3 h4 a:hover,.product-details4 h4 a:hover,.product-details5 h4 a:hover {
+    color: #fbb72c;
+}
+
+.product-details p,.product-details1 p,.product-details2 p,.product-details3 p,.product-details4 p,.product-details5 p {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    color: #999;
+}
+
+.product-bottom-details,.product-bottom-details1,.product-bottom-details2,.product-bottom-details3,.product-bottom-details4,.product-bottom-details5 {
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.product-bottom-details div,.product-bottom-details1 div,.product-bottom-details2 div,.product-bottom-details3 div,.product-bottom-details4 div,.product-bottom-details5 div {
+    float: left;
+    width: 50%;
+}
+
+.product-price,.product-price1,.product-price2,.product-price3,.product-price4,.product-price5 {
+    font-size: 18px;
+    color: #fbb72c;
+    font-weight: 600;
+}
+
+.product-price small,.product-price1 small,.product-price2 small,.product-price3 small,.product-price4 small,.product-price5 small {
+    font-size: 80%;
+    font-weight: 400;
+    text-decoration: line-through;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.product-links,.product-links1,.product-links2,.product-links3,.product-links4,.product-links5 {
+    text-align: right;
+}
+
+.product-links a,.product-links1 a ,.product-links2 a ,.product-links3 a,.product-links4 a ,.product-links5 a {
+    display: inline-block;
+    margin-left: 5px;
+    color: #e1e1e1;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.product-links a:hover ,.product-links1 a:hover,.product-links2 a:hover,.product-links3 a:hover,.product-links4 a:hover,.product-links5 a:hover{
+    color: #fbb72c;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
+}
+
+.footer{
+  margin-top: 100px;
+  width: 100%;
+  display: inline-block;
+  background: black;
+  height: 50vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed{
+  background: #666;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+
+
+.footer-distributed h3{
+  color:  orange;
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  lightseagreen;
+}
+
+
+.footer-distributed .footer-links{
+  color:  black;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+.footer-distributed .footer-links a:hover{
+  color: blue;
+}
+.footer-distributed .footer-company-name{
+  color:  #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  lightseagreen;
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: yellow;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color: orange;
+  font-size: 17px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 2px;
+  padding-right: 25px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+</style>
+<body>
+	<div class="home" id="Home">
+		<div class="rc_nav" id="centered_nav">
+          <a href="#Home">Home</a>
+		  <a href="#Just-arrived">Just-arrived</a>
+		  <a href="Best-sellers.html">Best-sellers</a>
+		  <a href="categories.html">Categories</a>
+		  <a href="contact.html">Contact us at</a>
+          <a href="#footer" title="Menu" style="font-size:18px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+        <h2 class="h1"><center><a href="">Thrillers</a></center></h2>
+<div class="product-card">
+		<div class="badge">New</div>
+		<div class="product-tumb">
+			<img src="https://prodimage.images-bn.com/pimages/9781538718872_p0_v1_s445x700.jpg" alt="">
+		</div>
+		<div class="product-details">
+			<span class="product-catagory">Genre: Thriller</span>
+			<h4><a href="">The Midwife Murderers</a></h4>
+			<p>n this psychological thriller, a missing patient raises concerns in a New York hospital, but as others start disappearing every dark possibility becomes more and more likely.<br>To Senior Midwife Lucy Ryuan.... </p>
+			<div class="product-bottom-details">
+				<div class="product-price"><small>$196.00</small>$128.99</div>
+				<div class="product-links">
+					<a href=""><i class="fa fa-heart"></i></a>
+					<a href=""><i class="fa fa-shopping-cart"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="product-card1">
+		<div class="badge1">Hot</div>
+		<div class="product-tumb1">
+			<img src="https://prodimage.images-bn.com/pimages/9781982152451_p0_v2_s192x300.jpg" alt="">
+		</div>
+		<div class="product-details1">
+			<span class="product-catagory1">Genre: Suspense</span>
+			<h4><a href="">Family Upstairs</a></h4>
+			<p>'Really good, gripping. I couldn't bear for it to finish... I don't want to move onto the next book too soon as it feels like a betrayal.' OLIVIA COLMAN'I swear I didn't breathe the whole time I was reading it..... </p>
+			<div class="product-bottom-details1">
+				<div class="product-price1"><small>$500.00</small>$432.10</div>
+				<div class="product-links1">
+					<a href=""><i class="fa fa-heart"></i></a>
+					<a href=""><i class="fa fa-shopping-cart"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="product-card2">
+		<div class="badge2">Trending</div>
+		<div class="product-tumb2">
+			<img src="https://images.booksense.com/images/024/751/9781949751024.jpg" alt="">
+		</div>
+		<div class="product-details2">
+			<span class="product-catagory2">Genre: Psychological thriller</span>
+			<h4><a href="">Goodbye, Paris</a></h4>
+			<p>* International Bestseller * A Book of the Month Club Pick* The Little Paris Bookshop meets Jojo Moyes in Goodbye, Paris, an utterly charming novel that proves that sometimes you have to break your .... </p>
+			<div class="product-bottom-details2">
+				<div class="product-price2"><small>$990.00</small>$528.99</div>
+				<div class="product-links2">
+					<a href=""><i class="fa fa-heart"></i></a>
+					<a href=""><i class="fa fa-shopping-cart"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h2 class="h2"><center><a href="">Science</a></center></h2>
+	<div class="product-card3">
+		<div class="badge3">New</div>
+		<div class="product-tumb3">
+			<img src="https://m.media-amazon.com/images/I/41o5B3nR1gL.jpg" alt="">
+		</div>
+		<div class="product-details3">
+			<span class="product-catagory3">Genre: Science</span>
+			<h4><a href="">Breathe</a></h4>
+			<p>No matter what you eat, how much you exercise, how skinny or young or wise you are, none of it matters if you're not breathing properly.
+            There is nothing more essential to our health and well-being than breathing: take air in, let it out, repeat 25,000 times a day. Yet, as a.... </p>
+			<div class="product-bottom-details3">
+				<div class="product-price3"><small>$740.00</small>$508.99</div>
+				<div class="product-links3">
+					<a href=""><i class="fa fa-heart"></i></a>
+					<a href=""><i class="fa fa-shopping-cart"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="product-card4">
+		<div class="badge4">Hot</div>
+		<div class="product-tumb4">
+			<img src="https://cdn.mos.cms.futurecdn.net/uGXeJjTy6pTGZeNBxQseJN-1200-80.jpg" alt="">
+		</div>
+		<div class="product-details4">
+			<span class="product-catagory4">Genre: Science fiction</span>
+			<h4><a href="">Children of Ruin</a></h4>
+			<p>Nonhuman intelligences are tricky to make understandable, believable and interesting, while staying alien, and author Adrian Tchaikovsky has landmark success in his novels "Children of Time" (2015) and "Children of Ruin" (2019)..... </p>
+			<div class="product-bottom-details4">
+				<div class="product-price4"><small>$90.00</small>$45.10</div>
+				<div class="product-links4">
+					<a href=""><i class="fa fa-heart"></i></a>
+					<a href=""><i class="fa fa-shopping-cart"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="product-card5">
+		<div class="badge5">Trending</div>
+		<div class="product-tumb5">
+			<img src="https://images-na.ssl-images-amazon.com/images/I/71b9qgU1tzL._AC_UL600_SR381,600_.jpg" alt="">
+		</div>
+		<div class="product-details5">
+			<span class="product-catagory5">Genre: Natural science</span>
+			<h4><a href="">A students guide to: Natural Science</a></h4>
+			<p>Physicist Stephen M. Barr’s lucid Student’s Guide to Natural Science aims to give students an understanding, in broad outline, of the nature, history, and great ideas of natural science from ancient times to the present, with a primary focus on physics. Barr begins with the contributions of the ancient Greeks, in particular the two great ideas that reality can be understood by the systematic .... </p>
+			<div class="product-bottom-details5">
+				<div class="product-price5"><small>$69.00</small>$22.99</div>
+				<div class="product-links5">
+					<a href=""><i class="fa fa-heart"></i></a>
+					<a href=""><i class="fa fa-shopping-cart"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="footer" id="footer">
+        <footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>PRADIGM</span></h3>
+
+				<p class="footer-links">
+					<a href="#Home" class="link-1">Home</a>					
+					<a href="#Just-arrived">Just-arrived</a>				
+					<a href="Best-sellers.html">Best seller</a>	
+					<a href="categories.html">Categories</a>			
+					<a href="Contact-us.html">Contact us at</a>
+					
+					<a href="help.html">About us</a>
+				</p>
+
+				<p class="footer-company-name">Pradigm © 2015</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>149 S. Cannought Place</span> Aurangabad, Maharashtra</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1.555.555.5555</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:bibliophiles@gmail.com">support@pradigm.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+					By a reader for the readers<br>Made with lots love and coffee
+				</p>
+
+				<div class="footer-icons">
+
+					
+					<a href="#"><img src="https://i.pinimg.com/originals/2e/20/0c/2e200c844ea18ccdc9c582329dfcb92e.jpg" width="48" height="48" alt="" /></a>
+					<a href="#"><img src="https://www.ceviz.io/static/google-logo-3f3dbee38e0e229df60c33e98ae0186d.png" width="48" height="48" alt="" /></a>
+					<a href="#"><img src="https://ih1.redbubble.net/image.565125817.5926/poster,840x830,f8f8f8-pad,1000x1000,f8f8f8.jpg" width="48" height="48" alt="" /></a>
+				</div>
+
+			</div>
+
+		</footer>
+</section>
+</body>
+</html>

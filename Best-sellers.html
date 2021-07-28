@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Best-sellers</title>
+</head>
+<style>
+	body{
+		background-color: grey;
+	}
+ .rc_nav {
+  overflow: hidden;
+  background-color: black;
+  text-align: center;
+  z-index: 6;
+  position: -webkit-sticky;
+  font-family: cursive;
+}
+.rc_nav a {
+ display: inline-block;
+ margin-right: -4px; 
+ color: orange;
+ padding: 10px 50px;
+ text-decoration: none;
+ font-size: 18px;
+ -webkit-transition: background 0.3s linear;
+ -moz-transition: background 0.3s linear;
+ -ms-transition: background 0.3s linear;
+ -o-transition: background 0.3s linear;
+ transition: background 0.3s linear;
+ z-index: 9;
+}
+.rc_nav a:hover {
+  background-color: #52575d;
+  color: white;
+}
+.rc_nav a:span{
+    position: absolute;
+    transition: all 0.4s;   
+}
+span{
+    transform: translate(0);
+}
+.rc_nav .icon {
+  display: inline-flex;
+}
+.rc_content {
+  text-align: center; 
+  padding-left:14px; 
+  margin-top: 100px;  
+  color: black;
+}
+ .container,.container1,.container2,.container3,.container4,.container5,.container6,.container7{ 
+ float: left;
+  height: auto; width: 600px;
+  margin: 5% auto;
+  margin-right: 65px;
+  text-align: center;
+  font-family:'Oswald', sans-serif;
+  font-weight:200px;
+  background: black;
+  color: orange;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+   transition: 1s;
+}
+.container8{
+	float: center;
+	height: auto; width: 600px;
+  margin: 5% auto;
+  text-align: center;
+  font-family:'Oswald', sans-serif;
+  font-weight:200px;
+  background: black;
+  color: orange;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+   transition: 1s;
+}
+.price,.price1,.price2,.price3,.price4,.price5,.price6,.price7,.price8 {
+  height: 50px; width: 150px;
+  overflow: hidden;
+  text-align: center;
+  font-weight:100;
+  background: black;
+  color: #a9c6ed;
+  float:left;
+  cursor: pointer;;
+  transition: all .5s ease,
+}
+  
+.price:hover,.price1:hover,.price2:hover,.price3:hover,.price4:hover,.price5:hover,.price6:hover,.price7:hover,.price8:hover {
+    background: #5eaaa8;
+    color: black;
+}
+.price:hover .shop:first-child,.price1:hover .shop1:first-child, .price2:hover .shop2:first-child, .price3:hover .shop3:first-child, .price4:hover .shop4:first-child, .price5:hover .shop5:first-child, .price6:hover .shop6:first-child, .price7:hover .shop7:first-child, .price8:hover .shop8:first-child {
+    margin-top: -50px;
+  }
+.shop,.shop1,.shop2,.shop3,.shop4,.shop5,.shop6,.shop7,.shop8{
+    height: 50px; width: 150px;
+    line-height: 50px;
+    font-size: 90%;
+    transition: all .2s ease-out;
+  }
+
+.image,.image1,.image2,.image3,.image4,.image5,.image6,.image7,.image8 {
+  height: 300px; width: 600px;
+  overflow: hidden;
+  text-align: center;
+  font-weight:100;
+  background: black;
+  float:left;
+  cursor: pointer;;
+  transition: 1s;
+  -webkit-transition: 1s;
+}
+ .image:hover,.image1:hover,.image2:hover,.image3:hover,.image4:hover,.image5:hover,.image6:hover,.image7:hover,.image8:hover {
+    background: orange;
+    color: black;
+}
+.image:hover .text:first-child,.image1:hover .text1:first-child ,.image2:hover .text2:first-child,.image3:hover .text3:first-child,.image4:hover .text4:first-child,.image5:hover .text5:first-child,.imag6:hover .text6:first-child,.image7:hover .text7:first-child,.image8:hover .text8:first-child {
+    margin-top: -300px;
+  }
+.text,.text1,.text2,.text3,.text4,.text5,.text6,.text7,.text8 {
+    height: 300px; width: 600px;;
+    line-height: 150%;
+    line-width:50px;
+    font-size: 100%;
+    transition: all .2s ease-out;
+    color: black;
+  }
+.fa {font-size:180%;text-shadow:1px 1px 0px#000;}
+.brand,.brand1,.brand2,.brand3,.brand4,.brand5,.brand6,.brand7,.brand8 {
+  height: 50px; width: 450px;
+  text-align: center;
+  background: orange;
+  color: black;
+  float:left;
+  line-height: 50px;
+  font-size: 100%; 
+  font-family:'Oswald', sans-serif;}
+
+
+.flip-container, .flip-container1,.flip-container2,.flip-container3,.flip-container4,.flip-container5,.flip-container6,.flip-container7,.flip-container8{
+  text-align:center;
+  margin: 0 auto;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  float: left;
+  font-size:100%;
+  cursor:pointer;
+}
+
+.flip-container:hover .flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+
+.flipper {
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 0.6s;
+  -moz-transform-style: preserve-3d;
+  position: relative;
+}
+
+.front, .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.front {
+  background: black;
+  color: orange;
+  z-index: 1;
+  line-height:300px;
+  -webkit-box-shadow: inset 0px 4px 0px 0px rgba(32,64,106,0.4);
+-moz-box-shadow: inset 0px 4px 0px 0px rgba(32,64,106,0.4);
+box-shadow: inset 0px 4px 0px 0px rgba(32,64,106,0.4);
+}
+.flip-container, .front, .back {
+  width: 100px;
+  height: 100px;
+  line-height:100px;
+  
+}
+.back {
+background: black;
+color: orange;  -webkit-transform: rotateY(-180deg);
+-moz-transform: rotateY(-180deg);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
+}
+
+.footer{
+  margin-top: 100px;
+  width: 100%;
+  display: inline-block;
+  background: black;
+  height: 50vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed{
+  background: #666;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+
+
+.footer-distributed h3{
+  color:  orange;
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  lightseagreen;
+}
+
+
+.footer-distributed .footer-links{
+  color:  black;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+.footer-distributed .footer-links a:hover{
+  color: blue;
+}
+.footer-distributed .footer-company-name{
+  color:  #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  lightseagreen;
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: yellow;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color: orange;
+  font-size: 17px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 2px;
+  padding-right: 25px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 3s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+@media (min-width: 320px) and (max-width: 767px){
+.rc_nav a {
+ display: inline-block;
+ margin-right: -4px; 
+ color: orange;
+ padding: 10px 30px;
+}
+.container,.container1,.container2,.container3,.container4,.container5,.container6,.container7,.container8{ 
+ float: center;
+  height: auto; width: 90%;
+  margin: 10% auto;
+  margin-left: 40px;
+  text-align: center;
+  font-family:'Oswald', sans-serif;
+  font-weight:200px;
+  background: black;
+  color: orange;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+   transition: 1s;
+}
+
+}
+</style>
+<script>
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+<body>
+<link href="https://fonts.googleapis.com/css?family=Oswald:700|Droid+Serif:400,700italic" rel="stylesheet" type="text/css" />
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
+<div class="rc_nav" id="centered_nav">
+          <a href="pradigm.html">Home</a>
+		  <a href="pradigm.html">Just-arrived</a>
+		  <a href="Best-sellers.html">Best-sellers</a>
+		  <a href="contact.html">Contact us at</a>
+          <a href="#footer" title="Menu" style="font-size:18px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<div class="container1">
+	  <div class="price1">
+	  <div class="shop1"><img src="https://img.icons8.com/plasticine/2x/favorite-cart.png" height="55px" width="55px"></div>
+	   <div class="popup" onclick="myFunction()">IDR.220.000
+  <span class="popuptext" id="myPopup">Added to cart...</span>
+</div> 
+	  </div>
+		  
+		  <div class="brand1">Thrillers To Tingle Your Spine</div>
+		  <div class="container1">
+		    <div class="image1">
+		    <div class="text1">
+		      <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQwVjlwc4UO0IimZCt-3OU9bji6UVXB_5MKrUJZc3bcQkqD42kB" alt="Smiley face" width="98%" height="95%">
+		    </div>
+		    <div class="text1">
+		      <p><b>Description:</b><br>The Woman in the Window is a thriller novel by Dan Mallory writing under the pen name "A. J. Finn".<br/><br><b>Author:</b><br>A. J. Finn<br><br/><b>Price:</b><br>IDR:220.00</p>
+		     </div>
+		  </div>
+		 </div>
+</div>
+<div class="container2">
+	  <div class="price2">
+	  <div class="shop2"><img src="https://img.icons8.com/plasticine/2x/favorite-cart.png" height="55px" width="55px"></div>
+	  <div class="price2">IDR.500.000</div>
+	  </div>
+		  
+		  <div class="brand2">Movie tie-ins</div>
+		  <div class="container2">
+		    <div class="image2">
+		    <div class="text2">
+		      <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1572940430l/4667024._SY475_.jpg" alt="Smiley face" width="98%" height="95%">
+		    </div>
+		    <div class="text2">
+		      <p><b>Description:</b><br>Three ordinary women are about to take one extraordinary step.<br>Twenty-two-year-old Skeeter has just returned home after graduating from Ole Miss. <br>She may have a degree, but it is 1962, Mississippi, and her mother will not be happy till Skeeter has a ring on her finger.<br/><br><b>Author:</b><br>Kathrine Stockett<br><br/><b>Price:</b><br>IDR:500.00</p>
+		     </div>
+		  </div>
+		 </div>
+</div>
+<div class="container">
+	  <div class="price">
+	  <div class="shop"><img src="https://img.icons8.com/plasticine/2x/favorite-cart.png" height="55px" width="55px"></div>
+	  <div class="price">IDR.120.000</div>
+	  </div>
+		  
+		  <div class="brand" id="self-help">Self-help</div>
+		  <div class="container">
+		    <div class="image">
+		    <div class="text">
+		      <img src="https://www.penguin.co.uk/content/dam/prh/books/109/1093443/9780091948993.jpg.transform/PRHDesktopWide_small/image.jpg" alt="Smiley face" width="100%" height="100%">
+		    </div>
+		    <div class="text">
+		      <p><b>Description:</b><br>Johanna Morrigan (aka Dolly Wilde) has it all: she is nineteen, lives in her own flat in London, and writes for the coolest music magazine in Britain.<br> Her star is rising, just not quickly enough for her liking.....<br/><br><b>Author:</b><br>Caitlin Moran<br><br/><b>Price:</b><br>IDR:120.00</p>
+		     </div>
+		  </div>
+		 </div>
+</div>
+<div class="container3">
+	  <div class="price3">
+	  <div class="shop3"><img src="https://img.icons8.com/plasticine/2x/favorite-cart.png" height="55px" width="55px"></div>
+	  <div class="price3">IDR.168.00</div>
+	  </div>
+		  
+		  <div class="brand3">Romance</div>
+		  <div class="container3">
+		    <div class="image3">
+		    <div class="text3">
+		      <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1572136222l/35855655.jpg" alt="Smiley face" width="100%" height="100%">
+		    </div>
+		    <div class="text3">
+		      <p><b>Description:</b><br>New York Times bestselling author Sarah MacLean returns with the much-anticipated final book in her Bareknuckle Bastards series, featuring a scoundrel duke and the powerful woman who brings him to his knees.<br> Grace Condry has spent a lifetime running from her past.<br/><br><b>Author:</b><br>Sarah Maclean<br><br/><b>Price:</b><br>IDR:168.00</p>
+		     </div>
+		  </div>
+		 </div>
+</div>
+<div class="container4">
+	  <div class="price4">
+	  <div class="shop4"><img src="https://img.icons8.com/plasticine/2x/favorite-cart.png" height="55px" width="55px"></div>
+	  <div class="price4">IDR.17.99</div>
+	  </div>
+		  
+		  <div class="brand4" id="self-help">Science fiction</div>
+		  <div class="container4">
+		    <div class="image4">
+		    <div class="text4">
+		      <img src="https://img1.od-cdn.com/ImageType-400/2390-1/D61/CF3/B4/%7BD61CF3B4-7351-4395-B1C6-D557ED9FBEF6%7DImg400.jpg" alt="Smiley face" width="100%" height="100%">
+		    </div>
+		    <div class="text4">
+		      <p><b>Description:</b><br>Rogue Protocol is the third entry in Martha Wells's Hugo, Nebula, Alex, and Locus Award-winning, New York Times and USA Today bestselling series, The Murderbot Diaries.<br> Starring a human-like android who keeps getting sucked back into adventure after adventure, though it just wants to be left alone, away from humanity and small talk. <br/><br><b>Author:</b><br>Martha Wells<br><br/><b>Price:</b><br>IDR:17.99</p>
+		     </div>
+		  </div>
+		 </div>
+</div>
+<div class="container5">
+	  <div class="price5">
+	  <div class="shop5"><img src="https://img.icons8.com/plasticine/2x/favorite-cart.png" height="55px" width="55px"></div>
+	  <div class="price5">IDR.89.70</div>
+	  </div>
+		  
+		  <div class="brand5" id="self-help">Medicine</div>
+		  <div class="container5">
+		    <div class="image5">
+		    <div class="text5">
+		      <img src="https://m.media-amazon.com/images/I/51U4L-zmRzL.jpg" alt="Smiley face" width="100%" height="100%">
+		    </div>
+		    <div class="text5">
+		      <p><b>Description:</b><br>For decades, Dr. Jeffrey Bland has been on the cutting edge of Functional Medicine, which seeks to pinpoint and prevent the cause of illness, rather than treat its symptoms.<br> Managing chronic diseases accounts for three quarters of our total healthcare costs, because we’re masking these illnesses with pills and temporary treatments,.....<br/><br><b>Author:</b><br>Jeffrey blande<br><br/><b>Price:</b><br>IDR:89.70</p>
+		     </div>
+		  </div>
+		 </div>
+</div>
+<div class="container6">
+	  <div class="price6">
+	  <div class="shop6"><img src="https://img.icons8.com/plasticine/2x/favorite-cart.png" height="55px" width="55px"></div>
+	  <div class="price6">IDR.990.00</div>
+	  </div>
+		  
+		  <div class="brand6" id="self-help">Technology</div>
+		  <div class="container6">
+		    <div class="image6">
+		    <div class="text6">
+		      <img src="https://athenareadshome.files.wordpress.com/2019/05/invisible-women-medium.jpg?w=576" alt="Smiley face" width="100%" height="100%">
+		    </div>
+		    <div class="text6">
+		      <p><b>Description:</b><br>From Michael Brooks, host of The Michael Brooks Show and co-host of the Majority Report,<br> comes the first book to directly respond to the Intellectual Dark Web and Jordan Peterson.<br/><br><b>Author:</b><br>Michael brooks<br><br/><b>Price:</b><br>IDR:990.00</p>
+		     </div>
+		  </div>
+		 </div>
+</div>
+<div class="container7">
+	  <div class="price7">
+	  <div class="shop7"><img src="https://img.icons8.com/plasticine/2x/favorite-cart.png" height="55px" width="55px"></div>
+	  <div class="price7">IDR.589.00</div>
+	  </div>
+		  
+		  <div class="brand7" id="self-help">Mathematics</div>
+		  <div class="container7">
+		    <div class="image7">
+		    <div class="text7">
+		      <img src="https://www.cs.nott.ac.uk/~pszgmh/pihj.jpg" alt="Smiley face" width="100%" height="100%">
+		    </div>
+		    <div class="text7">
+		      <p><b>Description:</b><br>This extensively updated and expanded version of the best-selling first edition <br>now covers recent and more advanced features of Haskell.<br/><br><b>Author:</b><br>Graham Hutton<br><br/><b>Price:</b><br>IDR:589.00</p>
+		     </div>
+		  </div>
+		 </div>
+</div>
+<div class="container8">
+	  <div class="price8">
+	  <div class="shop8"><img src="https://img.icons8.com/plasticine/2x/favorite-cart.png" height="55px" width="55px"></div>
+	  <div class="price8">IDR.1200.00</div>
+	  </div>
+		  
+		  <div class="brand8" id="self-help">Religion</div>
+		  <div class="container8">
+		    <div class="image8">
+		    <div class="text8">
+		      <img src="https://m.media-amazon.com/images/I/61LtmAR9EYL.jpg" alt="Smiley face" width="100%" height="100%">
+		    </div>
+		    <div class="text8">
+		      <p><b>Description:</b><br>Comparing Religions is a next-generation textbook which expertly guides, inspires, and challenges those who wish to think seriously about religious pluralism in the modern world.<br> A unique book teaching<br> the art and practice of comparing religions Draws on a wide range of religious traditions to demonstrate the complexity and power of...<br/><br><b>Author:</b><br>Andrea Jain<br><br/><b>Price:</b><br>IDR:1200.00</p>
+		     </div>
+
+		  </div>
+		 </div>
+</div>
+<section class="footer" id="footer">
+  <footer class="footer-distributed">
+
+<div class="footer-left">
+
+  <h3>PRADIGM</span></h3>
+
+  <p class="footer-links">
+    <a href="#Home" class="link-1">Home</a>					
+    <a href="#Just-arrived">Just-arrived</a>				
+    <a href="Best-sellers.html">Best seller</a>	
+    <a href="categories.html">Categories</a>			
+    <a href="Contact-us.html">Contact us at</a>
+    
+    <a href="help.html">About us</a>
+  </p>
+
+  <p class="footer-company-name">Pradigm © 2015</p>
+</div>
+
+<div class="footer-center">
+
+  <div>
+    <i class="fa fa-map-marker"></i>
+    <p><span>149 S. Cannought Place</span> Aurangabad, Maharashtra</p>
+  </div>
+
+  <div>
+    <i class="fa fa-phone"></i>
+    <p>+1.555.555.5555</p>
+  </div>
+
+  <div>
+    <i class="fa fa-envelope"></i>
+    <p><a href="mailto:bibliophiles@gmail.com">support@pradigm.com</a></p>
+  </div>
+
+</div>
+
+<div class="footer-right">
+
+  <p class="footer-company-about">
+    <span>About the company</span>
+    By a reader for the readers<br>Made with lots love and coffee
+  </p>
+
+  <div class="footer-icons">
+
+    
+    <a href="#"><img src="https://i.pinimg.com/originals/2e/20/0c/2e200c844ea18ccdc9c582329dfcb92e.jpg" width="48" height="48" alt="" /></a>
+    <a href="#"><img src="https://www.ceviz.io/static/google-logo-3f3dbee38e0e229df60c33e98ae0186d.png" width="48" height="48" alt="" /></a>
+    <a href="#"><img src="https://ih1.redbubble.net/image.565125817.5926/poster,840x830,f8f8f8-pad,1000x1000,f8f8f8.jpg" width="48" height="48" alt="" /></a>
+  </div>
+
+</div>
+
+</footer>
+</section>
+</body>
+</html>

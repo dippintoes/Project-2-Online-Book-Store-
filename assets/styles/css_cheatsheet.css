@@ -1,0 +1,165 @@
+body{
+	margin: 0px auto;
+	width: 100%;
+	background-color: #162447;
+}
+
+nav ul li{
+	list-style-type: none;
+	float: left;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 0.5px;
+	text-transform: capitalize;
+	font-size: 120%;
+}
+
+nav ul{
+	float: right;
+}
+nav{
+	width: 100%;
+	height: 20px;
+	background-color: #e43f5a;
+	position: fixed;
+	padding-bottom: 40px;
+}
+nav ul li a{
+	text-decoration: none;
+	color: #1b1b2f;
+}
+section{
+	background-color: #1b1b2f;
+	padding-bottom: 50px;
+	color: #e43f5a;
+}
+
+#head h1{
+	padding-top: 70px;
+	text-align: center;
+	font-size: 200%;
+	border-bottom-style: dotted;
+	color: #f7c5a8;
+}
+.content, .iframes{
+	width: 100%;
+	height: 100vh;
+	padding-top: 100px;
+}	
+.content .inner li{
+	list-style-type: none;
+	float: left;
+	padding-right: 10px;
+	padding-left: 5px;
+}
+.content .inner li:last-child{
+	list-style-type: none;
+	float: none;
+}
+.content .inner li:not(:first-child)::before{
+	content: '|';
+	padding-right: 10px;
+}
+
+.background .content, .border .content, .box-model .content,
+ .background .iframes, .border .iframes, .box-model .iframes, .fonts .content,
+ .fonts .iframes, .links .content, .links .iframes, .lists .content, .lists .iframes,
+  .animate .content, .table .content, .text .content, .transition .content{
+	display: table-cell;
+	overflow: auto;
+	font-size: 120%;
+}
+.background .content h1, .border .content h1, .box-model .content h1, .fonts .content h1,
+ .links .content h1, .lists .content h1, .animate .content h1, .table .content h1,
+.text .content h1, .transition .content h1{
+	padding-left: 40px;
+	font-size: 160%;
+	color: #ffdbc5;
+}
+.background,.border ,.box-model, .fonts, .links ,.lists, .animate, .table, .text, .transition{
+  text-align: justify;
+  letter-spacing: 5px;
+  outline: 2px solid red;
+  word-break:loose;
+  text-decoration:blink;
+  text-shadow: 5px 0px 8px red;
+  width: 100%;
+  height: 100vh;
+  display: table;
+}
+.animate{
+  min-width: 500px;
+  min-height: 450px;
+  animation: animate 10s infinite;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+}
+
+@keyframes animate{
+  0%{
+    background-color: thistle;
+  }
+  25%{
+    background-color: yellowgreen;
+  }
+  50%{
+    background-color: indigo;
+  }
+  100%{
+    background-color: lightcoral;
+  }
+}
+
+@media(min-width: 2560px){
+	section .content{
+		width: 50%;
+		float: left;
+	}
+	section .iframes{
+		width: 50%;
+		float: left;
+	}
+} 
+@media(min-width: 1440px) and (max-width: 2560px){
+	section .content{
+		width: 50%;
+		float: left;
+	}
+	section .iframes{
+		width: 50%;
+		float: left;
+	}
+} 
+@media(min-width: 1024px) and (max-width: 1439px){
+	section .content{
+		width: 40%;
+		float: left;
+	}
+	section .iframes{
+		width: 60%;
+		float: left;
+	}
+} 
+@media(min-width: 768px) and (max-width: 1023px){
+	section .content{
+		width: 50%;
+		float: left;
+	}
+	section .iframes{
+		width: 50%;
+		float: left;
+	}
+} 
+@media(min-width: 320px) and (max-width: 767px){
+	section .content{
+		width: 100%;
+		float: left;
+	}
+	section .iframes{
+		width: 100%;
+		float: left;
+	}
+}
